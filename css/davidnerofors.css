@@ -746,6 +746,11 @@ blockquote {
   grid-template-rows: 1fr;
 }
 
+.projects-container.hero {
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
 .project-img {
   width: 100%;
   height: 100%;
@@ -939,9 +944,9 @@ blockquote {
 }
 
 .project-img.project-4 {
-  background-image: url('../images/Frame-135.jpg');
-  background-position: 0% 50%;
-  background-size: auto 100%;
+  background-image: url('../images/DavidNeråfors_Montage.webp');
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .project-text {
@@ -955,10 +960,10 @@ blockquote {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
@@ -971,6 +976,7 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1207,7 +1213,7 @@ blockquote {
 
 .archive-image-list {
   width: 100%;
-  padding-top: 100%;
+  padding-top: 67%;
   background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
   background-position: 50% 50%;
   background-size: cover;
@@ -1242,6 +1248,14 @@ blockquote {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+.show-projects-link.project-3 {
+  text-decoration: line-through;
+}
+
+.show-projects-link.project-4 {
+  text-decoration: line-through;
 }
 
 .utility-page-wrap {
@@ -1598,6 +1612,8 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1647,10 +1663,10 @@ blockquote {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .lottie-animation-3 {
@@ -1672,6 +1688,43 @@ blockquote {
 
 .overview-container.small {
   display: none;
+}
+
+.link-archive {
+  text-decoration: line-through;
+}
+
+.contact-me_block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.contact-me_block.archive {
+  position: relative;
+  z-index: 50;
+  display: block;
+  width: 9em;
+  height: 4em;
+  margin-top: -4em;
+  padding-top: 0px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
 }
 
 @media screen and (max-width: 991px) {
@@ -1766,6 +1819,10 @@ blockquote {
   .archive-more-collection-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .img-about {
+    background-position: 35% 50%;
   }
 
   .div-block-15 {
@@ -1956,6 +2013,8 @@ blockquote {
   }
 
   .project-img.project-2-section-5-1 {
+    background-color: #a1675a;
+    background-position: 50% 50%;
     background-size: cover;
   }
 
@@ -2017,6 +2076,18 @@ blockquote {
     justify-content: flex-start;
   }
 
+  .section-about {
+    height: auto;
+  }
+
+  .about-wrapper {
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr auto;
+    grid-template-rows: 1fr auto;
+  }
+
   .slug-text-wrapper {
     width: 100%;
   }
@@ -2039,6 +2110,13 @@ blockquote {
 
   .theproblem-container {
     margin-top: 4em;
+  }
+
+  .contact-me_block {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -2084,6 +2162,8 @@ blockquote {
   grid-row-start: 1;
   -ms-grid-row-span: 1;
   grid-row-end: 2;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 #w-node-f734513d-f6a4-515f-570b-8318b95ae87d-61fca1fd {
@@ -2449,17 +2529,6 @@ blockquote {
   grid-row-end: 2;
 }
 
-#w-node-_42b9bb7b-cd3f-0479-7b6a-3ef2105ae619-88fca217 {
-  -ms-grid-column: 2;
-  grid-column-start: 2;
-  -ms-grid-column-span: 0;
-  grid-column-end: 2;
-  -ms-grid-row: 1;
-  grid-row-start: 1;
-  -ms-grid-row-span: 1;
-  grid-row-end: 2;
-}
-
 #w-node-_22d06400-0558-f721-77cc-b9b615739a60-88fca217 {
   -ms-grid-column: 2;
   grid-column-start: 2;
@@ -2716,6 +2785,17 @@ blockquote {
     grid-column-end: span 1;
     -ms-grid-row-align: center;
     align-self: center;
+  }
+
+  #w-node-fcc019d4-ee03-fdcb-b1ec-8293be92f714-73fca212 {
+    -ms-grid-row: 2;
+    grid-row-start: 2;
+    -ms-grid-row-span: 1;
+    grid-row-end: 3;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
   }
 
   #w-node-_42b9bb7b-cd3f-0479-7b6a-3ef2105ae612-0dfca216 {
